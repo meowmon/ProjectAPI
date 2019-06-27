@@ -1,0 +1,79 @@
+/** CREDITS : HiuHiu  -- Please don't remove this comment
+ * 
+ */
+package api.maven.project.model;
+
+/** @author: meepo
+ */
+public class RequestDto {
+	private long id;
+    private long idUser;
+    private long idHoso;
+    private String date;
+    private String time;
+    private String fee;
+    private boolean khamTQ;
+    private boolean xnghiem;
+    private boolean sieuam;
+    private boolean xquang;
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public long getIdUser() {
+		return idUser;
+	}
+	public void setIdUser(long idUser) {
+		this.idUser = idUser;
+	}
+	public long getIdHoso() {
+		return idHoso;
+	}
+	public void setIdHoso(long idHoso) {
+		this.idHoso = idHoso;
+	}
+	public String getDate() {
+		return date;
+	}
+	public void setDate(String date) {
+		this.date = date;
+	}
+	public String getTime() {
+		return time;
+	}
+	public void setTime(String time) {
+		this.time = time;
+	}
+	public String getFee() {
+		return fee;
+	}
+	public void setFee(String fee) {
+		this.fee = fee;
+	}
+	public boolean isKhamTQ() {
+		return khamTQ;
+	}
+	public void setKhamTQ(boolean khamTQ) {
+		this.khamTQ = khamTQ;
+	}
+	public boolean isXnghiem() {
+		return xnghiem;
+	}
+	public void setXnghiem(boolean xnghiem) {
+		this.xnghiem = xnghiem;
+	}
+	public boolean isSieuam() {
+		return sieuam;
+	}
+	public void setSieuam(boolean sieuam) {
+		this.sieuam = sieuam;
+	}
+	public boolean isXquang() {
+		return xquang;
+	}
+	public void setXquang(boolean xquang) {
+		this.xquang = xquang;
+	}
+}
