@@ -12,10 +12,23 @@ public class RequestDto {
     private String date;
     private String time;
     private String fee;
-    private boolean khamTQ;
     private boolean xnghiem;
     private boolean sieuam;
     private boolean xquang;
+    private String descrip;
+    private String status;
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public String getDescrip() {
+		return descrip;
+	}
+	public void setDescrip(String descrip) {
+		this.descrip = descrip;
+	}
 	public long getId() {
 		return id;
 	}
@@ -52,12 +65,6 @@ public class RequestDto {
 	public void setFee(String fee) {
 		this.fee = fee;
 	}
-	public boolean isKhamTQ() {
-		return khamTQ;
-	}
-	public void setKhamTQ(boolean khamTQ) {
-		this.khamTQ = khamTQ;
-	}
 	public boolean isXnghiem() {
 		return xnghiem;
 	}
@@ -76,4 +83,5 @@ public class RequestDto {
 	public void setXquang(boolean xquang) {
 		this.xquang = xquang;
 	}
+	
 }

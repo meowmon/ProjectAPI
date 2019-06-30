@@ -5,8 +5,8 @@ package api.maven.project.service;
 
 /** @author: meepo
  */
-public class CourseNotFoundException extends RuntimeException {
-	public CourseNotFoundException(String message) {
+public class UserCodeDuplicateException extends RuntimeException {
+	public UserCodeDuplicateException(String message) {
         super(message);
     }
 
