@@ -13,6 +13,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 public interface HoSoRepository extends CrudRepository<HoSo, Long> {
+
+	@Query("SELECT a FROM HoSo a WHERE a.idUser = ?1")
+	List<HoSo> getHoSoByUserId(long userId);
 //	@Query("SELECT a FROM Course a WHERE a.status = ?1")
 //    List<Course> getCourseByStatus(String status);
 //	@Transactional

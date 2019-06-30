@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 public interface RequestRepository extends CrudRepository<Request, Long> {
-	@Query("SELECT a FROM Request a WHERE a.id_user = ?1")
+	@Query("SELECT a FROM Request a WHERE a.idUser = ?1")
     List<Request> getRequestByUserId(long userId);
 //	@Transactional
 //	@Modifying
