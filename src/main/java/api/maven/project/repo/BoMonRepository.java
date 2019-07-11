@@ -4,7 +4,6 @@
 package api.maven.project.repo;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -13,15 +12,14 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 @Repository
-public interface UserRepository extends CrudRepository<User, Long> {
-	@Query("SELECT a FROM User a WHERE a.code = ?1")
-    Optional<User> findByCode(String code);
+public interface BoMonRepository extends CrudRepository<BoMon, Long> {
+
+	@Query("SELECT a FROM Khoa a WHERE a.id = ?1")
+	String getKhoa(long id);
+//	@Query("SELECT a FROM Course a WHERE a.status = ?1")
+//    List<Course> getCourseByStatus(String status);
 //	@Transactional
 //	@Modifying
-//	@Query("Delete from Enroll a where User_id = ?1")
-//	void deleteUserEnroll(long id);
-	@Transactional
-	@Modifying
-	@Query("UPDATE User a SET a.password = ?1 WHERE a.id = ?2 ")
-	void updatePassword(String password, long id);
+//	@Query("Delete from Enroll a where course_id = ?1")
+//	void deleteCourseEnroll(long id);
 }

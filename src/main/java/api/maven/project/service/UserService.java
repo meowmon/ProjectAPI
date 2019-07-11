@@ -34,12 +34,13 @@ public class UserService {
         entity.setName(dto.getName());
         entity.setGender(dto.getGender());
         entity.setCode(dto.getCode());
-        entity.setIdBoMon(dto.getIdBoMon());
+        entity.setId_bomon(dto.getId_bomon());
         entity.setEmail(dto.getEmail());
         entity.setPhone(dto.getPhone());
-        entity.setBoMon(dto.getBoMon());
+        entity.setBo_mon(dto.getBo_mon());
         entity.setBirthday(dto.getBirthday());
         entity.setRole(dto.getRole());
+        entity.setPassword("123456");
         return entity;
     }
     public void setUserById(long id, UserDto dto) {
@@ -47,10 +48,10 @@ public class UserService {
     	if(ou.isPresent()) {
     		User nc = ou.get();
     		nc.setName(dto.getName());
-    		nc.setId(dto.getId());
+//    		nc.setId(dto.getId());
     		nc.setGender(dto.getGender());
-    		nc.setCode(dto.getCode());
-    		nc.setIdBoMon(dto.getIdBoMon());
+//    		nc.setCode(dto.getCode());
+//    		nc.setId_bomon(dto.getId_bomon());
     		nc.setEmail(dto.getEmail());
     		nc.setPhone(dto.getPhone());
     		repository.save(nc);

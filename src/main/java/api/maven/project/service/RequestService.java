@@ -43,12 +43,10 @@ public class RequestService {
     	Optional<Request> ou = repository.findById(id);
     	if(ou.isPresent()) {
     		Request nc = ou.get();
-    		nc.setId(dto.getId());
     		nc.setDate(dto.getDate());
             nc.setDescrip(dto.getDescrip());
             nc.setFee(dto.getFee());
             nc.setIdHoso(dto.getIdHoso());
-            nc.setIdUser(dto.getIdUser());
             nc.setSieuam(dto.isSieuam());
             nc.setTime(dto.getTime());
             nc.setStatus(dto.getStatus());

@@ -10,12 +10,13 @@ public class UserDto {
 	private String name;
 	private String gender;
 	private String code;
-	private long idBoMon;
-	private String BoMon;
+	private long id_bomon;
+	private String bo_mon;
 	private String email;
 	private String phone;
 	private String role;
 	private String birthday;
+	private String password;
 	public long getId() {
 		return id;
 	}
@@ -40,17 +41,24 @@ public class UserDto {
 	public void setCode(String code) {
 		this.code = code;
 	}
-	public long getIdBoMon() {
-		return idBoMon;
+	
+	public long getId_bomon() {
+		return id_bomon;
 	}
-	public void setIdBoMon(long idBoMon) {
-		this.idBoMon = idBoMon;
+	public void setId_bomon(long id_bomon) {
+		this.id_bomon = id_bomon;
 	}
-	public String getBoMon() {
-		return BoMon;
+	public String getBo_mon() {
+		return bo_mon;
 	}
-	public void setBoMon(String boMon) {
-		BoMon = boMon;
+	public void setBo_mon(String bo_mon) {
+		this.bo_mon = bo_mon;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	public String getEmail() {
 		return email;

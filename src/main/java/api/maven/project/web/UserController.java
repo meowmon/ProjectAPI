@@ -40,4 +40,9 @@ public class UserController {
 	    public User getById(@PathVariable(required = true) long id) {
 	        return service.getUserById(id);
 	    } 
+	    
+	    @PutMapping("/changepass")
+	    public void changePassword(@RequestBody UserDto dto) {
+	    	repository.updatePassword(dto.getPassword(), dto.getId());
+	    }
 }
