@@ -24,4 +24,7 @@ public interface UserRepository extends CrudRepository<User, Long> {
 	@Modifying
 	@Query("UPDATE User a SET a.password = ?1 WHERE a.id = ?2 ")
 	void updatePassword(String password, long id);
+	
+	@Query("SELECT a FROM User a WHERE a.password = ?1 AND a.code = ?2")
+    User login(String password, String username);
 }

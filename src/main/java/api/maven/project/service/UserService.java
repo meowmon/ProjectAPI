@@ -35,7 +35,7 @@ public class UserService {
         entity.setGender(dto.getGender());
         entity.setCode(dto.getCode());
         entity.setId_bomon(dto.getId_bomon());
-        entity.setEmail(dto.getEmail());
+//        entity.setEmail(dto.getEmail());
         entity.setPhone(dto.getPhone());
         entity.setBo_mon(dto.getBo_mon());
         entity.setBirthday(dto.getBirthday());

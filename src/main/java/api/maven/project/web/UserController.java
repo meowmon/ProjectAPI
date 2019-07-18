@@ -4,6 +4,7 @@
 package api.maven.project.web;
 
 import api.maven.project.model.UserDto;
+import api.maven.project.model.LoginDto;
 import api.maven.project.repo.User;
 import api.maven.project.repo.UserRepository;
 import api.maven.project.service.UserService;
@@ -44,5 +45,10 @@ public class UserController {
 	    @PutMapping("/changepass")
 	    public void changePassword(@RequestBody UserDto dto) {
 	    	repository.updatePassword(dto.getPassword(), dto.getId());
+	    }
+	    
+	    @PostMapping("/login")
+	    public User login(@RequestBody LoginDto dto) {
+	    	return repository.login(dto.getPassword(), dto.getUsername());
 	    }
 }
