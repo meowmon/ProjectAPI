@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 public interface UserRepository extends CrudRepository<User, Long> {
 	@Query("SELECT a FROM User a WHERE a.code = ?1")
-    Optional<User> findByCode(String code);
+    User findByCode(String code);
 //	@Transactional
 //	@Modifying
 //	@Query("Delete from Enroll a where User_id = ?1")

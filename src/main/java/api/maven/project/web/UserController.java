@@ -42,6 +42,11 @@ public class UserController {
 	        return service.getUserById(id);
 	    } 
 	    
+	    @GetMapping("/code/{code}")
+	    public User getByCode(@PathVariable(required = true) String code) {
+	        return repository.findByCode(code);
+	    } 
+	    
 	    @PutMapping("/changepass")
 	    public void changePassword(@RequestBody UserDto dto) {
 	    	repository.updatePassword(dto.getPassword(), dto.getId());

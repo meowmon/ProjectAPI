@@ -16,7 +16,7 @@ public class UserService {
 	@Autowired UserRepository repository;
 	
 	public void add(UserDto dto) {
-		Optional<User> optionalUser = repository.findByCode(dto.getCode());
+		Optional<User> optionalUser = repository.findById(dto.getId());
 		if(optionalUser.isPresent())
 			throw (new UserCodeDuplicateException("User code dupplicate"));
 		else
