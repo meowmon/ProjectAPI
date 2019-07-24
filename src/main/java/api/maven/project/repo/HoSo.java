@@ -16,15 +16,15 @@ public class HoSo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private long idUser;
-	private long idXQuang;
-	private long idXNghiem;
-	private long idSieuam;
 	private String reason;
 	private String date;
 	private int leftEyeIndex;
 	private int rightEyeIndex;
 	private int height;
 	private int weight;
+	private String name;
+	private String code;
+	private String phone;
 	private int blood_pressure;
 	private int heart_rate;
 	private String conclude;
@@ -41,24 +41,6 @@ public class HoSo {
 	}
 	public void setIdUser(long idUser) {
 		this.idUser = idUser;
-	}
-	public long getIdXQuang() {
-		return idXQuang;
-	}
-	public void setIdXQuang(long idXQuang) {
-		this.idXQuang = idXQuang;
-	}
-	public long getIdXNghiem() {
-		return idXNghiem;
-	}
-	public void setIdXNghiem(long idXNghiem) {
-		this.idXNghiem = idXNghiem;
-	}
-	public long getIdSieuam() {
-		return idSieuam;
-	}
-	public void setIdSieuam(long idSieuam) {
-		this.idSieuam = idSieuam;
 	}
 	public String getReason() {
 		return reason;
@@ -125,5 +107,23 @@ public class HoSo {
 	}
 	public void setHeath_class(String heath_class) {
 		this.heath_class = heath_class;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getCode() {
+		return code;
+	}
+	public void setCode(String code) {
+		this.code = code;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 }

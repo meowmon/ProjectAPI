@@ -23,6 +23,9 @@ public class Request {
     private boolean xnghiem;
     private boolean sieuam;
     private boolean xquang;
+    private String name;
+	private String code;
+	private String phone;
     private String descrip;
     private String status;
 	public String getStatus() {
@@ -90,6 +93,24 @@ public class Request {
 	}
 	public void setXquang(boolean xquang) {
 		this.xquang = xquang;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getCode() {
+		return code;
+	}
+	public void setCode(String code) {
+		this.code = code;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 
 }

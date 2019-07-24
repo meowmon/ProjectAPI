@@ -37,6 +37,9 @@ public class RequestService {
         entity.setXnghiem(dto.isXnghiem());
         entity.setStatus(dto.getStatus());
         entity.setXquang(dto.isXquang());
+        entity.setCode(dto.getCode());
+        entity.setName(dto.getName());
+        entity.setPhone(dto.getPhone());
         return entity;
     }
     public void setRequestById(long id, RequestDto dto) {

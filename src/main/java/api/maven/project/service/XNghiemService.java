@@ -33,6 +33,7 @@ public class XNghiemService {
         entity.setMcv(dto.getMcv());
         entity.setRbc(dto.getRbc());
         entity.setWbc(dto.getWbc());
+        entity.setId_hoso(dto.getId_hoso());
         return entity;
     }
 }

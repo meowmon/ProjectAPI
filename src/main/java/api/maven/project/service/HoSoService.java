@@ -31,11 +31,8 @@ public class HoSoService {
         entity.setDescrip(dto.getDescrip());
         entity.setBlood_pressure(dto.getBlood_pressure());
         entity.setIdUser(dto.getIdUser());
-        entity.setIdSieuam(dto.getIdSieuam());
         entity.setDate(dto.getDate());
-        entity.setIdXNghiem(dto.getIdXNghiem());
         entity.setHeart_rate(dto.getHeart_rate());
-        entity.setIdXQuang(dto.getIdXQuang());
         entity.setConclude(dto.getConclude());
         entity.setHeath_class(dto.getHeath_class());
         entity.setHeight(dto.getHeight());
@@ -43,6 +40,9 @@ public class HoSoService {
         entity.setRightEyeIndex(dto.getRightEyeIndex());
         entity.setWeight(dto.getWeight());
         entity.setReason(dto.getReason());
+        entity.setCode(dto.getCode());
+        entity.setName(dto.getName());
+        entity.setPhone(dto.getPhone());
         return entity;
     }
     public void setHoSoById(long id, HoSoDto dto) {
@@ -54,11 +54,8 @@ public class HoSoService {
             nc.setDescrip(dto.getDescrip());
             nc.setBlood_pressure(dto.getBlood_pressure());
             nc.setIdUser(dto.getIdUser());
-            nc.setIdSieuam(dto.getIdSieuam());
             nc.setDate(dto.getDate());
-            nc.setIdXNghiem(dto.getIdXNghiem());
             nc.setHeart_rate(dto.getHeart_rate());
-            nc.setIdXQuang(dto.getIdXQuang());
             nc.setConclude(dto.getConclude());
             nc.setHeath_class(dto.getHeath_class());
             nc.setHeight(dto.getHeight());

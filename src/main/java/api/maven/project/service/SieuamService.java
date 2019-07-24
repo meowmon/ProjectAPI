@@ -27,6 +27,7 @@ public class SieuamService {
         entity.setDescrip(dto.getDescrip());
         entity.setConclude(dto.getConclude());
         entity.setImage(dto.getImage());
+        entity.setId_hoso(dto.getId_hoso());
         return entity;
     }
 }

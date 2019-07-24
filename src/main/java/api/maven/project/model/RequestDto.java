@@ -9,6 +9,9 @@ public class RequestDto {
 	private long id;
     private long idUser;
     private long idHoso;
+    private String name;
+	private String code;
+	private String phone;
     private String date;
     private String time;
     private String fee;
@@ -82,6 +85,24 @@ public class RequestDto {
 	}
 	public void setXquang(boolean xquang) {
 		this.xquang = xquang;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getCode() {
+		return code;
+	}
+	public void setCode(String code) {
+		this.code = code;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 	
 }
