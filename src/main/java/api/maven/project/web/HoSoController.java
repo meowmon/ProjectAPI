@@ -45,4 +45,9 @@ public class HoSoController {
 	    public List<HoSo> getByUserId(@PathVariable(required = true) long userId) {
 	        return repository.getHoSoByUserId(userId);
 	    } 
+	    
+	    @GetMapping("/from/{start}/to/{end}")
+	    public List<HoSo> getSession(@PathVariable(required = true) String start,@PathVariable(required = true) String end){
+	    	return repository.getSession(start, end);
+	    }
 }

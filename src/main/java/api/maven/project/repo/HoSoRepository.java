@@ -16,6 +16,9 @@ public interface HoSoRepository extends CrudRepository<HoSo, Long> {
 
 	@Query("SELECT a FROM HoSo a WHERE a.idUser = ?1")
 	List<HoSo> getHoSoByUserId(long userId);
+	
+	@Query("SELECT a FROM HoSo a WHERE a.date >= ?1 AND a.date <= ?2")
+	List<HoSo> getSession(String start, String end);
 //	@Query("SELECT a FROM Course a WHERE a.status = ?1")
 //    List<Course> getCourseByStatus(String status);
 //	@Transactional

@@ -43,6 +43,7 @@ public class HoSoService {
         entity.setCode(dto.getCode());
         entity.setName(dto.getName());
         entity.setPhone(dto.getPhone());
+        entity.setGender(dto.getGender());
         return entity;
     }
     public void setHoSoById(long id, HoSoDto dto) {
