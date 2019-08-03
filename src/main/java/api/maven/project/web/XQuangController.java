@@ -34,6 +34,10 @@ public class XQuangController {
 	    public XQuang getById(@PathVariable(required = true) long id) {
 	        return service.getXQuangById(id);
 	    } 
-	    
+	     
+	    @PutMapping("/hasRecord/{id}")
+	    public void hasRecored(@PathVariable(required = true) long id) {
+	        repository.updateTitle(id);
+	    } 
 	    
 }

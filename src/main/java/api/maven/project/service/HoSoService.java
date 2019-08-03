@@ -43,6 +43,9 @@ public class HoSoService {
         entity.setCode(dto.getCode());
         entity.setName(dto.getName());
         entity.setPhone(dto.getPhone());
+        entity.setHas_sieuam(false);
+        entity.setHas_xquang(false);
+        entity.setHas_xnghiem(false);
         return entity;
     }
     public void setHoSoById(long id, HoSoDto dto) {

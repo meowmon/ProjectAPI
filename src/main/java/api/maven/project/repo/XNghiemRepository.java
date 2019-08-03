@@ -19,4 +19,7 @@ public interface XNghiemRepository extends CrudRepository<XNghiem, Long> {
 //	@Modifying
 //	@Query("Delete from Enroll a where course_id = ?1")
 //	void deleteCourseEnroll(long id);
+	@Modifying
+    @Query("UPDATE Hosos t SET t.has_xnghiem = true WHERE t.id= ?1")
+    public void updateTitle(long id);
 }

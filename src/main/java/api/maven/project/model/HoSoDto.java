@@ -22,6 +22,27 @@ public class HoSoDto {
 	private String conclude;
 	private String descrip;
 	private String heath_class;
+	private boolean has_sieuam;
+	private boolean has_xnghiem;
+	private boolean has_xquang;
+	public boolean isHas_sieuam() {
+		return has_sieuam;
+	}
+	public void setHas_sieuam(boolean has_sieuam) {
+		this.has_sieuam = has_sieuam;
+	}
+	public boolean isHas_xnghiem() {
+		return has_xnghiem;
+	}
+	public void setHas_xnghiem(boolean has_xnghiem) {
+		this.has_xnghiem = has_xnghiem;
+	}
+	public boolean isHas_xquang() {
+		return has_xquang;
+	}
+	public void setHas_xquang(boolean has_xquang) {
+		this.has_xquang = has_xquang;
+	}
 	public long getId() {
 		return id;
 	}
