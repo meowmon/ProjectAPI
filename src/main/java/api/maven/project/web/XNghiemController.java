@@ -6,6 +6,7 @@ package api.maven.project.web;
 import api.maven.project.model.XNghiemDto;
 import api.maven.project.repo.XNghiem;
 import api.maven.project.repo.XNghiemRepository;
+import api.maven.project.repo.XQuang;
 import api.maven.project.service.XNghiemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -34,5 +35,9 @@ public class XNghiemController {
 	        repository.updateTitle(id);
 	    } 
 	    
+	    @GetMapping("/record/{id}")
+	    public XNghiem recored(@PathVariable(required = true) long id) {
+	        return repository.record(id);
+	    } 
 	    
 }

@@ -46,6 +46,7 @@ public class HoSoService {
         entity.setHas_sieuam(false);
         entity.setHas_xquang(false);
         entity.setHas_xnghiem(false);
+        entity.setGender(dto.getGender());
         return entity;
     }
     public void setHoSoById(long id, HoSoDto dto) {

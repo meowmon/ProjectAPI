@@ -6,6 +6,7 @@ package api.maven.project.web;
 import api.maven.project.model.SieuamDto;
 import api.maven.project.repo.Sieuam;
 import api.maven.project.repo.SieuamRepository;
+import api.maven.project.repo.XQuang;
 import api.maven.project.service.SieuamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -35,5 +36,8 @@ public class SieuamController {
 	        return service.getSieuamById(id);
 	    } 
 	    
-	    
+	    @GetMapping("/record/{id}")
+	    public Sieuam recored(@PathVariable(required = true) long id) {
+	        return repository.record(id);
+	    } 
 }

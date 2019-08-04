@@ -25,6 +25,13 @@ public class HoSo {
 	private String name;
 	private String code;
 	private String phone;
+	private String gender;
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 	private int blood_pressure;
 	private int heart_rate;
 	private String conclude;

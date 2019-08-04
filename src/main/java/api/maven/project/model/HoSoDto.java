@@ -13,6 +13,13 @@ public class HoSoDto {
 	private String code;
 	private String phone;
 	private String date;
+	private String gender;
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 	private int leftEyeIndex;
 	private int rightEyeIndex;
 	private int height;

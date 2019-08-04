@@ -33,13 +33,13 @@ public class NotifyController {
 	    } 
 	    
 	    @GetMapping("/user/{id}")
-	    public Notify getNotifyByUserId(@PathVariable(required = true) long id) {
+	    public List<Notify> getNotifyByUserId(@PathVariable(required = true) long id) {
 	        return service.getNotifyByUserId(id);
 	    }
 	    
-	    @GetMapping("/unread/{id}")
-	    public Notify getUnreadNotifyByUserId(@PathVariable(required = true) long id) {
-	        return service.getUnreadByUserId(id);
+	    @GetMapping("/unread/{user}")
+	    public List<Notify> getUnreadNotifyByUser(@PathVariable(required = true) String user) {
+	        return repository.findUnreadByUser(user);
 	    }
 	    
 }

@@ -18,19 +18,16 @@ public class NotifyService {
 	public void add(NotifyDto dto) {
 			repository.save(toEntity(dto));
     }
-    public Notify getNotifyByUserId(long id) {
-        Optional<Notify> optionalNotify = repository.findByUserId(id);
-        return optionalNotify.orElseThrow(() -> new NotifyNotFoundException("Couldn't find notifies with user id: " + id));
-    }
-    public Notify getUnreadByUserId(long id) {
-    	Optional<Notify> optionalNotify = repository.findUnreadByUserId(id);
-        return optionalNotify.orElseThrow(() -> new NotifyNotFoundException("Couldn't find notifies with user id: " + id));
+    public List<Notify> getNotifyByUserId(long id) {
+        List<Notify> optionalNotify = repository.findByUserId(id);
+        return optionalNotify;
     }
     private Notify toEntity(NotifyDto dto) {
         Notify entity = new Notify();
         entity.setContent(dto.getContent());
         entity.setIdUser(dto.getIdUser());
         entity.setStatus("unread");
+        entity.setTarget(dto.getTarget());
         return entity;
     }
     public void setReadNotify(long id) {

@@ -13,13 +13,13 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 public interface XNghiemRepository extends CrudRepository<XNghiem, Long> {
-//	@Query("SELECT a FROM Course a WHERE a.status = ?1")
-//    List<Course> getCourseByStatus(String status);
+	@Query("SELECT a FROM XNghiem a WHERE a.id_hoso = ?1")
+    XNghiem record(long id);
 //	@Transactional
 //	@Modifying
 //	@Query("Delete from Enroll a where course_id = ?1")
 //	void deleteCourseEnroll(long id);
 	@Modifying
-    @Query("UPDATE Hosos t SET t.has_xnghiem = true WHERE t.id= ?1")
+    @Query("UPDATE HoSo t SET t.has_xnghiem = true WHERE t.id= ?1")
     public void updateTitle(long id);
 }
