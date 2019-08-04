@@ -17,12 +17,10 @@ public interface NotifyRepository extends CrudRepository<Notify, Long> {
 
 	@Query("SELECT a FROM Notify a WHERE a.idUser = ?1")
 	List<Notify> findByUserId(long id);
-//	@Query("SELECT a FROM Course a WHERE a.status = ?1")
-//    List<Course> getCourseByStatus(String status);
-//	@Transactional
-//	@Modifying
-//	@Query("Delete from Enroll a where course_id = ?1")
-//	void deleteCourseEnroll(long id);
+	
+	@Modifying
+    @Query("UPDATE Notify t SET t.status = 'read' WHERE t.id= ?1")
+    public void readNoti(long id);
 
 	@Query("SELECT a FROM Notify a WHERE a.target = ?1 and a.status = 'unread'")
 	List<Notify> findUnreadByUser(String user);

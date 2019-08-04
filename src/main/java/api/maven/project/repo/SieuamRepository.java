@@ -18,7 +18,8 @@ public interface SieuamRepository extends CrudRepository<Sieuam, Long> {
 //	@Modifying
 //	@Query("Delete from Enroll a where course_id = ?1")
 //	void deleteCourseEnroll(long id);
+	@Transactional
 	@Modifying
-    @Query("UPDATE HoSo t SET t.has_sieuam = true WHERE t.id= ?1")
+    @Query("UPDATE HoSo t SET t.has_sieuam = 1 WHERE t.id= ?1")
     public void updateTitle(long id);
 }

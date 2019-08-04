@@ -42,4 +42,9 @@ public class NotifyController {
 	        return repository.findUnreadByUser(user);
 	    }
 	    
+	    @PostMapping("/read/{id}")
+	    public void readNoti(@PathVariable(required = true) long id) {
+	    	repository.readNoti(id);
+	    }
+	    
 }
